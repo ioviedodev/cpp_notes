@@ -19,6 +19,12 @@ struct bit_control
 	uint8_t future : 5;
 };
 
+union number_letter
+{
+	char letter;
+	uint8_t ascii_number;
+};
+
 union control_flag
 {
 	uint8_t			control;
@@ -33,9 +39,11 @@ int main()
 	Person *ptr_person_1;
 	Person* ptr_person_2;
 	Person person = Person();
+	Person& ref_person= person;
 	control_flag control_flag_1 = { 0x05 };
 
-
+	number_letter variable = { 'a' };
+	variable.ascii_number = 98;
 	architecture architec = architecture::architecture_x32;
 
 
@@ -64,12 +72,45 @@ int main()
 	ptr_person_1->name = "Natalia";
 	ptr_person_1->age = 24;
 
+	//cout << "\n";
+	//cout << word;
+	//cout << "\n";
+	//cout << (int *)&word;
+	//cout << "\n";
+	//cout << (int *)pword;
+	//cout << "\n";
+	//cout << (int*)&pword;
+
+	cout << "Printing ptr_person_1 information \n";
+	cout << "Age: " << ptr_person_1->age << endl;
+	cout << "Name: " << ptr_person_1->name << endl;
 	cout << "\n";
-	cout << word;
+
+	cout << "Printing person information \n";
+	cout << "Age: " << person.age << endl;
+	cout << "Name: " << person.name << endl;
 	cout << "\n";
-	cout << (int *)&word;
+
+	ref_person.name = "Oviedo";
+	ref_person.age = 31;
+
+	cout << "Printing was change ref person information \n";
+	cout << "Age: " << person.age << endl;
+	cout << "Name: " << person.name << endl;
 	cout << "\n";
-	cout << (int *)pword;
+
+	cout << "Printing ptr_person_1 memory information \n";
+	cout << "&ptr_person_1: " << (int *)&ptr_person_1 << endl;
+	cout << "ptr_person_1: " << (int*)ptr_person_1 << endl;
 	cout << "\n";
-	cout << (int*)&pword;
+
+	//variable
+	cout << "Variable information \n";
+	cout << "letter: " << variable.letter  << endl;
+	cout << "ascii_number: " << (int)variable.ascii_number << endl;
+	cout << "\n";
+
+	cout << "Architecture information \n";
+	cout << "architec: " << (int)architec << endl;
+	cout << "\n";
 }
