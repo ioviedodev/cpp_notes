@@ -24,12 +24,18 @@
     <ClCompile Include="Herbivorous.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Carnivorous.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.hpp">
       <Filter>Archivos de recursos</Filter>
     </ClInclude>
     <ClInclude Include="Herbivorous.hpp">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="Carnivorous.hpp">
       <Filter>Archivos de recursos</Filter>
     </ClInclude>
   </ItemGroup>
