@@ -64,6 +64,8 @@ People::People(string name, int age)
 
 int main()
 {
+	Animal pity = Animal();
+
 	People people = People("Ivan", 31);
 	People* ptr_people = new People("Daniel",28);
 
