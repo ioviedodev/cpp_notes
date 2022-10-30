@@ -11,7 +11,7 @@ class Animal
 {
 private:
 	static int NumberOfAnimals;
-protected:
+private:
 	string Food;
 public:
 	Animal();

@@ -127,11 +127,13 @@
     <ClCompile Include="Carnivorous.cpp" />
     <ClCompile Include="Herbivorous.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Omnivore.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.hpp" />
     <ClInclude Include="Carnivorous.hpp" />
     <ClInclude Include="Herbivorous.hpp" />
+    <ClInclude Include="Omnivore.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
