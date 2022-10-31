@@ -16,6 +16,7 @@ void main()
 	//Carnivorous* carn = new Carnivorous();
 	Omnivore* omn = new Omnivore();
 
+
 	cout << "Number of animals: " << Animal::GetNumberOfAnimals() <<endl;
 
 	/*animal1->Eat();
