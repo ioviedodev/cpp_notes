@@ -4,15 +4,18 @@
 #include <iostream>
 #include "Player.h"
 #include "MapCell.h"
+#include "GameMap.h"
 
 int main()
 {
 	bool isGameOver = false;
 	Player hero;
+	GameMap map;
 
 	while (isGameOver == false)
 	{
 		hero.CallInput();
+		map.Draw();
 	}
 
     std::cout << "Hello World!\n";

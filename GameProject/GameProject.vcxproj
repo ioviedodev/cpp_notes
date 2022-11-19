@@ -151,11 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameMap.cpp" />
     <ClCompile Include="GameProject.cpp" />
     <ClCompile Include="MapCell.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GameMap.h" />
     <ClInclude Include="MapCell.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
