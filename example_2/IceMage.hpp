@@ -4,7 +4,7 @@
 #include<iostream>
 #include"Mage.hpp"
 
-#define BONUS 30
+#define BONUS 1
 
 using namespace std;
 
@@ -12,11 +12,10 @@ using namespace std;
 class IceMage : public Mage
 {
 public:
-	IceMage(int iMana, int iHp, int iPower) : Mage(iMana, iHp, iPower)
+	IceMage(int iBaseHp, int iBasePower) : Mage(iBaseHp, iBasePower)
 	{
-		mana = iMana;
-		hp = iHp;
-		power = iPower + BONUS;
+		Hp = iBaseHp;
+		Power = iBasePower + BONUS;
 	}
 };
 

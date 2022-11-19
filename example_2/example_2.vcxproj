@@ -123,11 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FireMage.cpp" />
     <ClCompile Include="IceMage.cpp" />
     <ClCompile Include="Mage.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FireMage.hpp" />
     <ClInclude Include="IceMage.hpp" />
     <ClInclude Include="Mage.hpp" />
   </ItemGroup>

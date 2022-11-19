@@ -6,20 +6,32 @@ using namespace std;
 class Mage {
 
 protected:
-	int mana, hp, power;
+	int Hp, Power;
 
 public:
-	Mage(int iMana, int iHp, int iPower)
+	Mage(int iBaseHp, int iBasePower)
 	{
-		mana = iMana;
-		hp = iHp;
-		power = iPower;
+		Hp = iBaseHp;
+		Power = iBasePower;
+	}
+
+	int Damage()
+	{
+		return Power;
+	}
+
+	void GetDamage(int iValue)
+	{
+		Hp -= iValue;
+		cout << "My mage has left: " << Hp << "of life" << endl;
 	}
 
 	void Spell()
 	{
-		cout << "Fireworks!!! You have " << power <<  " of power!! "<< endl;
+		cout << "Fireworks!!! You have " << Power <<  " of power!! "<< endl;
 	}
+
+
 };
 
 #endif
