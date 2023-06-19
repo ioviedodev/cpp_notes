@@ -12,9 +12,12 @@ int main()
 	Player hero;
 	GameMap map;
 
+
+
 	while (isGameOver == false)
 	{
 		hero.CallInput();
+		map.SetPlayerCell(hero.x, hero.y);
 		map.Draw();
 	}
 

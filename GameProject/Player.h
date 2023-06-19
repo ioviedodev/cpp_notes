@@ -4,10 +4,12 @@
 class Player 
 {
 public:
+	int x, y;
 	Player();
 	void CallInput();
+	
 protected:
-	int x, y;
+	
 private:
 };
 #endif

@@ -10,9 +10,11 @@ class GameMap
 
 public:
 	MapCell cells[TOTAL_ROWS][TOTAL_COLLUMS];
+	MapCell* PlayerCell;
+
 	GameMap();
 	void Draw();
-
+	void SetPlayerCell(int PlayerX, int PlayerY);
 protected:
 
 private:

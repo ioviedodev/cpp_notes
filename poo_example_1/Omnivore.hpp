@@ -4,10 +4,11 @@
 #include"Carnivorous.hpp"
 #include"Herbivorous.hpp"
 
-class Omnivore : public Herbivorous, public Carnivorous
+class Omnivore /*: public Herbivorous, public Carnivorous*/
 {
 public:
-	Omnivore(): Herbivorous(), Carnivorous() {} //Todo check bug adding twice time animal to total count
+	//Omnivore(): Herbivorous(), Carnivorous() {} //Todo check bug adding twice time animal to total count
+
 
 	void Eat()
 	{

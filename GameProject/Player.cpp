@@ -5,9 +5,10 @@ using namespace std;
 
 Player::Player()
 {
-	x = 1;
-	y = 1;
+	x = 0;
+	y = 0;
 }
+
 
 void Player::CallInput() 
 {
@@ -18,19 +19,19 @@ void Player::CallInput()
 	{
 	case 'w':
 		cout << "The player move up" << endl;
-		y += 1;
+		x = x - 1;
 		break;
 	case 's':
 		cout << "The player move down" << endl;
-		y -= 1;
+		x = x+1;
 		break;
 	case 'd':
 		cout << "The player move right" << endl;
-		x += 1;
+		y = y + 1;
 		break;
 	case 'a':
 		cout << "The player move left" << endl;
-		x -= 1;
+		y = y - 1;
 		break;
 	default:
 		break;

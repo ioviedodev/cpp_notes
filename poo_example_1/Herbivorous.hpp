@@ -6,8 +6,10 @@
 class Herbivorous : public Animal
 {
 public:
-	Herbivorous() : Animal()
+	int age;
+	Herbivorous(int _age) : Animal()
 	{
+		this->age = _age;
 		this->Food = "herbs";
 	}
 
