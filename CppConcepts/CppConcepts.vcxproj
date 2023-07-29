@@ -126,6 +126,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="container.h" />
+    <ClInclude Include="MultBy.h" />
     <ClInclude Include="Num.h" />
     <ClInclude Include="Rational.h" />
   </ItemGroup>

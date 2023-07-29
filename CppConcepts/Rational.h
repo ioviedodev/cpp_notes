@@ -4,6 +4,10 @@
 #include <string>
 #include <iostream>
 
+/*
+* Examples of oveloading member and no member operators + - * =
+*/
+
 using std::string;
 const string nanstr{ "[NAN]" };
 

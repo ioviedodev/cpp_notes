@@ -26,5 +26,11 @@
     <ClInclude Include="Num.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
+    <ClInclude Include="MultBy.h">
+      <Filter>Archivos de origen</Filter>
+    </ClInclude>
+    <ClInclude Include="container.h">
+      <Filter>Archivos de origen</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

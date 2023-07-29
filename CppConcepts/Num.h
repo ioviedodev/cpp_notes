@@ -1,6 +1,10 @@
 #ifndef NUM_H
 #define NUM_H
 
+/*
+* Examples of operators pre increment and post increment
+*/
+
 class Num {
 	int value;
 public:
