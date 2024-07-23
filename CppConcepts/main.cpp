@@ -4,6 +4,7 @@
 #include <string>
 #include "container.h"
 #include "MultBy.h"
+#include "ComplexNumber.h"
 #include <algorithm>
 #include <iostream>
 #include <functional>
@@ -12,13 +13,29 @@
 //#define increment_decrement
 //#define functors
 //#define move_constructor
-#define lambda
+//#define lambda
+//#define tmp
+#define COMPLEX_EXAMPLE
+
 using std::string;
 using namespace std;
 
 int main()
 {
-#ifdef lambda
+#if defined (tmp)
+	vector<double> volumeSamples;
+	double volume = 0;
+
+	volumeSamples.push_back(22.3);
+	volumeSamples.push_back(35.1);
+	volumeSamples.push_back(52);
+	
+	if(volume>0)
+		volumeSamples.push_back(volume);
+
+	volumeSamples.clear();
+
+#elif defined (lambda)
 
 	uint8_t data_rx[] = { 0x05,0x00, 0x11,0x32, 0xa1, 0x65, 0x11 };
 	uint16_t size = sizeof(data_rx);
@@ -223,7 +240,7 @@ int main()
 	printf("\n\n functionD: %s", functionD());
 
 
-#elif move_constructor
+#elif defined (move_constructor)
 	container<int> bufferRx{ 0x11,0x22,0x56 };
 	container<int> dataLayer7{ 0x00,0x00,0x00, 0x00 };
 
@@ -243,14 +260,14 @@ int main()
 	printf("\ndataLayer7: {%s} ", dataLayer7.str().c_str());
 	printf("\nDataRx: {%s} ", DataRx.str().c_str());
 
-#elif functors
+#elif defined (functors)
 	MultBy multby4(4);
 	printf("result: %i", multby4(5));
 	printf("result: %i", multby4(10));
 	printf("result: %i", multby4(20));
 
 
-#elif increment_decrement
+#elif defined (increment_decrement)
 	Num number1(3);
 	std::cout << "number1: " << std::to_string(number1.getValue()) << std::endl;
 	Num number2 = number1++;
@@ -263,7 +280,7 @@ int main()
 	--number1;
 	std::cout << "--number1: " << std::to_string(number1.getValue()) << std::endl;
 
-#elif opeator_overload
+#elif defined (opeator_overload)
 	Rational a(5, 10);
 	Rational b(3, 10);
 	string message = "Hola mundo ";
@@ -294,6 +311,26 @@ int main()
 	message += a;
 
 	std::cout << message << std::endl;
+
+#elif defined(COMPLEX_EXAMPLE)
+
+	COMPLEX_NUMBER numberC1(3,-5);
+	COMPLEX_NUMBER numberC2(1, -3);
+	COMPLEX_NUMBER numberC3 = numberC1;
+
+	std::cout << "numberC1: " + numberC1.str() << std::endl;
+	std::cout << "numberC2: " + numberC2.str() << std::endl;
+	std::cout << "numberC3: " + numberC3.str() << std::endl;
+
+	numberC3 += numberC2;
+	std::cout << "numberC3 [numberC3+= numberC2]: " + numberC3.str() << std::endl;
+	
+	numberC2 += 2;
+	std::cout << "numberC2 [numberC2 += 2]: " + numberC2.str() << std::endl;
+
+	numberC3 = numberC2 + numberC1 + 5;
+	std::cout << "numberC3 [numberC2 + numberC1 + 5]: " + numberC3.str() << std::endl;
+
 #endif
 	return 0;
 }

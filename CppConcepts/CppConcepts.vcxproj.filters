@@ -32,5 +32,8 @@
     <ClInclude Include="container.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
+    <ClInclude Include="ComplexNumber.h">
+      <Filter>Archivos de origen</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
