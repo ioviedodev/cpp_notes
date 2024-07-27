@@ -20,6 +20,10 @@
 using std::string;
 using namespace std;
 
+#if defined(COMPLEX_EXAMPLE)
+void printMessage(const std::string& _data);
+#endif
+
 int main()
 {
 #if defined (tmp)
@@ -331,6 +335,27 @@ int main()
 	numberC3 = numberC2 + numberC1 + 5;
 	std::cout << "numberC3 [numberC2 + numberC1 + 5]: " + numberC3.str() << std::endl;
 
+	/*CONVERSION OPERATOR*/
+	string numberComplexStr = "Complex number";
+	numberComplexStr += numberC3;
+	std::cout << numberComplexStr << std::endl;
+	printMessage(numberC3);
+
+	std::cout << "INCREMENT AND DECREMENT OPERATORS" << std::endl;
+	numberC1=numberC3++;
+	std::cout << "POSTINCREMENT \n numberC1=numberC3++:" + numberC1.str() + "/numberC3: " + numberC3.str() << std::endl;
+	numberC1=numberC2--;
+	std::cout << "POSTPREDECREMENT \n numberC1=numberC2--:" + numberC1.str() + "/numberC2: " + numberC2.str() << std::endl;
+	numberC1 = ++numberC3;
+	std::cout << "PREINCREMENT \n numberC1=++numberC3:" + numberC1.str() + "/numberC3: " + numberC3.str() << std::endl;
+	numberC1 = --numberC2;
+	std::cout << "PREDECREMENT \n numberC1=--numberC2:" + numberC1.str() + "/numberC2: " + numberC2.str() << std::endl;
+
 #endif
 	return 0;
+}
+
+void printMessage(const std::string& _data)
+{
+	std::cout << "COMPLEX NUMBER " + _data << std::endl;
 }
