@@ -4,6 +4,7 @@
 #include <string>
 #include "container.h"
 #include "MultBy.h"
+#include "LedBrightnessController.h"
 #include "ComplexNumber.h"
 #include <algorithm>
 #include <iostream>
@@ -15,7 +16,8 @@
 //#define move_constructor
 //#define lambda
 //#define tmp
-#define COMPLEX_EXAMPLE
+//#define COMPLEX_EXAMPLE
+#define LED_BRIGHTNESS_CONTROLLER_EXAMPLE //application of functors
 
 using std::string;
 using namespace std;
@@ -350,12 +352,23 @@ int main()
 	std::cout << "PREINCREMENT \n numberC1=++numberC3:" + numberC1.str() + "/numberC3: " + numberC3.str() << std::endl;
 	numberC1 = --numberC2;
 	std::cout << "PREDECREMENT \n numberC1=--numberC2:" + numberC1.str() + "/numberC2: " + numberC2.str() << std::endl;
+#elif defined (LED_BRIGHTNESS_CONTROLLER_EXAMPLE)
+LedBrightnessController controller(250);
+std::vector<int> levelsBrightness = { 10 , 50 ,100 ,120, 150, 180, 200, 220, 240 , 270, 310 };
+
+for (int level : levelsBrightness)
+{
+	controller(level);
+	std::cout << controller.str() << std::endl;
+}
 
 #endif
 	return 0;
 }
 
+#if defined(COMPLEX_EXAMPLE)
 void printMessage(const std::string& _data)
 {
 	std::cout << "COMPLEX NUMBER " + _data << std::endl;
 }
+#endif

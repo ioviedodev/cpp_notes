@@ -35,5 +35,8 @@
     <ClInclude Include="ComplexNumber.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
+    <ClInclude Include="LedBrightnessController.h">
+      <Filter>Archivos de origen</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

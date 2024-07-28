@@ -128,6 +128,7 @@
   <ItemGroup>
     <ClInclude Include="ComplexNumber.h" />
     <ClInclude Include="container.h" />
+    <ClInclude Include="LedBrightnessController.h" />
     <ClInclude Include="MultBy.h" />
     <ClInclude Include="Num.h" />
     <ClInclude Include="Rational.h" />
